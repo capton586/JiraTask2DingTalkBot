@@ -1,0 +1,6 @@
+{
+   "jira_url": "https://your-jira-instance.atlassian.net",
+   "jira_token": "your_jira_api_token",
+   "socks5_proxy": "socks5://localhost:1080",
+   "webhook_url": "https://oapi.dingtalk.com/robot/send?access_token=your_dingtalk_webhook_token"
+ }
