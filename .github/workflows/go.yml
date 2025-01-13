@@ -29,7 +29,7 @@ jobs:
       run: go build -o myapp-${{ matrix.os }}-${{ matrix.arch }}
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v3  # 更新: actions/upload-artifact@v2 -> actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4  # 更新: actions/upload-artifact@v3 -> actions/upload-artifact@v4
       with:
         name: myapp-${{ matrix.os }}-${{ matrix.arch }}
         path: myapp-${{ matrix.os }}-${{ matrix.arch }}
