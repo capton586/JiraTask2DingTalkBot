@@ -98,12 +98,12 @@ func sendMessages(client *jira.Client, config Config, currentUser *jira.User) {
 
 	// 构建消息内容
 	var content string
-	content += fmt.Sprintf("今天 %s 到期任务\n", today)
+	content += fmt.Sprintf("今天 %s 到期任务 (%d 条)\n", today, len(issuesToday))
 	for _, issue := range issuesToday {
 		content += fmt.Sprintf("任务: %s - %s\n", issue.Key, issue.Fields.Summary)
 	}
 
-	content += "\n未来三天到期任务\n"
+	content += fmt.Sprintf("\n未来三天到期任务 (%d 条)\n", len(issuesFuture))
 	for _, issue := range issuesFuture {
 		content += fmt.Sprintf("任务: %s - %s\n", issue.Key, issue.Fields.Summary)
 	}
